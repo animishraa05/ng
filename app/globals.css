@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: var(--font-display), "Cormorant Garamond", Georgia, serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8f7f3;
+    color: #191a16;
+    overflow-x: hidden;
+  }
+
+  .font-serif-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .text-mega {
+    font-size: 21vw;
+    line-height: 0.75;
+    letter-spacing: -0.04em;
+  }
+}
+
+/* Completely remove Next.js corner dev indicator / portal badges */
+nextjs-portal,
+#nextjs-dev-tools-menu,
+[data-nextjs-toast],
+[data-nextjs-dialog-overlay],
+[data-next-badge-root],
+[data-next-badge],
+div[class*="nextjs-toast"],
+button[aria-label="Open Next.js Dev Tools"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ============================================================================
+   WARM EDITORIAL NEOBRUTALISM UTILITIES (Palette-Matched to #191a16 & #f8f7f3)
+   ============================================================================ */
+.neo-box {
+  border: 2px solid #191a16;
+  box-shadow: 5px 5px 0px 0px #191a16;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neo-box-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px 0px #191a16;
+}
+
+.neo-box-sm {
+  border: 1.5px solid #191a16;
+  box-shadow: 3px 3px 0px 0px #191a16;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neo-box-olive {
+  border: 2px solid #191a16;
+  box-shadow: 6px 6px 0px 0px #777b5a;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neo-box-sand {
+  border: 2px solid #191a16;
+  box-shadow: 6px 6px 0px 0px #e8dfc8;
+}
+
+.neo-btn {
+  border: 2px solid #191a16;
+  box-shadow: 4px 4px 0px 0px #191a16;
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #191a16;
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #191a16;
+}
+
+.neo-btn-light {
+  border: 2px solid #f8f7f3;
+  box-shadow: 4px 4px 0px 0px #777b5a;
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.neo-btn-light:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #e8dfc8;
+}
+
+.neo-btn-light:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #e8dfc8;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Breathing & Linen Curtain Drift Animations (8–12s cycle) */
+@keyframes breath-expand {
+  0%, 100% {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 0.42;
+  }
+  50% {
+    transform: scale(1.14) translate3d(-1.5%, 2%, 0);
+    opacity: 0.68;
+  }
+}
+
+@keyframes linen-drift {
+  0%, 100% {
+    transform: translate3d(-2%, -1%, 0) rotate(-1.5deg) scaleX(1);
+  }
+  50% {
+    transform: translate3d(2.5%, 1.5%, 0) rotate(1.5deg) scaleX(1.06);
+  }
+}
+
+.animate-breath-slow {
+  animation: breath-expand 10s ease-in-out infinite;
+}
+
+.animate-linen-drift {
+  animation: linen-drift 12s ease-in-out infinite;
+}

@@ -1,0 +1,24 @@
+# NG Yoga Studio Indore — Website Redesign & Completion Tasks
+
+- [x] **Task 1: Create `tasks.md` & Research Punchy Yoga Ad Lines**
+  - Researched high-converting yoga hooks (*"Unroll Your Mat. Unstress Your Mind."*, *"Silence the hustle. Find your flow."*, *"Sculpt Lean Muscle. Torch Calories Without Joint Stress."*) and discovered additional NG Yoga Studio Indore offerings (*Wall Rope Yoga, Wheel Pose, Splits/Hanumanasana, Backbends*).
+- [x] **Task 2: Remove Next.js Dev Indicator Symbol**
+  - Configured `devIndicators: false` in `next.config.ts` and added global CSS rules in `app/globals.css` to hide all Next.js dev badges/portals completely.
+- [x] **Task 3: Replace "Mathematical Statue" Canvas with Real Aesthetic Yoga Visuals & Scroll Motion**
+  - Deleted `AsanaScrollCanvas.tsx`.
+  - Rebuilt `StickyAsanaChoreography.tsx` using real Pinterest-aesthetic sunlit yoga photography, smooth `motion/react` transitions, and instant `.mp4` studio video drop support.
+- [x] **Task 4: Upgrade UI to Warm Tactile Neobrutalism + Motion Design (Saved as State 1)**
+  - Applied crisp `2px` ink borders (`#141413`), tactile offset shadows (`neo-box`, `neo-btn`), kinetic marquee banner, `canvas-confetti` pass celebration, and removed all bloated text.
+  - Preserved this exact liked design as **State 1 (`state-1-classic`)** so it can be recalled anytime with 1 click.
+- [x] **Task 5: Improve Navbar & Mobile Responsiveness**
+  - Added a sticky Neobrutalist navbar with an animated mobile drawer menu (`AnimatePresence`) for one-tap mobile navigation.
+- [x] **Task 6: Complete All Remaining Sections with `[To Be Answered]` & PFP Placeholders**
+  - Added Founder / Lead Instructor PFP Portrait placeholder + `[To Be Answered]` slots for certifications & experience.
+  - Added Student Review PFP avatar placeholders + `[To Be Answered]` verification slots.
+  - Added `[To Be Answered]` instructor and pricing/FAQ slots where studio confirmation is needed.
+- [x] **Task 7: Full-Viewport Three.js 3D & Unboxed Dynamic Background Motion Engine**
+  - Installed `three` and `@types/three`.
+  - Built a full-viewport Three.js WebGL 3D scene in `YogaBackgroundMotion.tsx` matching the exact studio palette (`#F6F2E9`, `#D8E6D5`, `#F7D98C`, `#F3C6B6`, `#1B4332`) with a 10-part procedural 3D Sacred Lotus & Gyroscopic Chakra sculpture, a custom vertex-displaced Prana Silk Wave ribbon, and 48 instanced floating orbs reacting smoothly to scroll and cursor via `THREE.MathUtils.damp`.
+  - Embedded radially-feathered, unboxed dynamic yoga visuals directly into the background of the page, Hero, and Asana Scroll section (no container boxes!), plus a bottom-left switcher to toggle between `3D + Unboxed Bg`, `Pure Three.js 3D`, and `State 1 (Saved)`.
+- [x] **Task 8: Lint & Build Verification**
+  - Run `lint_applet` and `compile_applet` to verify zero errors.

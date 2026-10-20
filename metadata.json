@@ -1,0 +1,6 @@
+{
+  "name": "NG Yoga Studio Indore",
+  "description": "Fit Body • Calm Mind • Strong Soul. Premier yoga studio at Prem Plaza, Ashok Nagar, Indore offering Weight Loss Yoga, Strength & Flexibility, Back Pain Relief, Pranayama, Meditation, and Acro Yoga.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
